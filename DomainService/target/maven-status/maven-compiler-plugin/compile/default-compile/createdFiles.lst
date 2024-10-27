@@ -1,0 +1,3 @@
+com\example\domain\DomainApplication.class
+com\example\domain\DomainController.class
+com\example\domain\DomainRoute.class
