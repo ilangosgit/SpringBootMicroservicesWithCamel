@@ -1,3 +1,8 @@
-c:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\DomainController.java
-c:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\DomainRoute.java
-c:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\DomainApplication.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\route\MyRoute.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\service\IDomainService.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\config\CamelConfig.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\model\DomainResponse.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\Controller\DomainController.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\model\DomainRequest.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\DomainApplication.java
+C:\dev\SpringBootWS\SpringBootMicroservicesWithCamel\DomainService\src\main\java\com\example\domain\service\DomainService.java

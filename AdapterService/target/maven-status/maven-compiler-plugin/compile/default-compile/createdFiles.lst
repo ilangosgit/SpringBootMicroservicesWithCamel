@@ -1,2 +1,6 @@
-com\example\adapter\AdapterController.class
+com\example\adapter\controller\AdapterController.class
+com\example\adapter\model\AdapterRequest.class
+com\example\adapter\service\IAdapterService.class
+com\example\adapter\model\AdapterResponse.class
+com\example\adapter\service\AdapterService.class
 com\example\adapter\AdapterApplication.class
