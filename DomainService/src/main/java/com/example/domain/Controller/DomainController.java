@@ -1,6 +1,5 @@
-package com.example.domain.Controller;
+package com.example.domain.controller;
 
-import com.example.domain.model.DomainRequest;
 import com.example.domain.model.DomainResponse;
 import com.example.domain.service.IDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,17 @@ public class DomainController {
     @Autowired
     private IDomainService domainService;
 
-    @PostMapping("/process")
-    public ResponseEntity<DomainResponse> process(@RequestBody DomainRequest request) {
-        DomainResponse response = domainService.process(request);
-        return ResponseEntity.ok(response);
+    @GetMapping("/process")
+    public ResponseEntity<DomainResponse> process(@RequestParam String data) {
+        try {
+            System.out.println("Inside rest controller Processing request: " + data);
+            DomainResponse response = domainService.process(data);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            // Log the exception
+            e.printStackTrace();
+            // Return a 500 Internal Server Error response
+            return ResponseEntity.status(500).body(new DomainResponse());
+        }
     }
 }

@@ -12,10 +12,15 @@ public class MyRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
+        System.out.println("inside configure MyRoute: " + adapterServiceUrl);
+        onException(Exception.class)
+            .log("Exception occurred: ${exception.message}")
+            .handled(true);
+
         from("direct:callAdapterService")
             .routeId("callAdapterServiceRoute")
             .log("Sending request to Adapter Service: ${body}")
-            .toD("http4://" + adapterServiceUrl + "?bridgeEndpoint=true")
+            .toD(adapterServiceUrl)
             .log("Received response from Adapter Service: ${body}");
     }
 }
