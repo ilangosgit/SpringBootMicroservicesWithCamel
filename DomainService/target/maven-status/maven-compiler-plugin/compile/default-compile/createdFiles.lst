@@ -1,7 +1,8 @@
-com\example\domain\model\DomainResponse.class
+com\example\domain\model\MyReqBody.class
 com\example\domain\route\MyRoute.class
-com\example\domain\service\DomainService.class
-com\example\domain\service\IDomainService.class
+com\example\domain\config\CamelConfig$1.class
+com\example\domain\service\MyReqBodyService.class
+com\example\domain\config\CamelConfig.class
+com\example\domain\route\MyReqBodyRoute.class
 com\example\domain\DomainApplication.class
 com\example\domain\controller\DomainController.class
-com\example\domain\model\DomainRequest.class

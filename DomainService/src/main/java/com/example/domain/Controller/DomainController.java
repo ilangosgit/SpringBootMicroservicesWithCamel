@@ -1,29 +1,34 @@
-package com.example.domain.controller;
+package com.example.domain.controller;  
 
-import com.example.domain.model.DomainResponse;
-import com.example.domain.service.IDomainService;
+import com.example.domain.model.*;
+
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.apache.camel.ProducerTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+
+
 @RequestMapping("/domain")
 public class DomainController {
 
-    @Autowired
-    private IDomainService domainService;
 
-    @GetMapping("/process")
-    public ResponseEntity<DomainResponse> process(@RequestParam String data) {
-        try {
-            System.out.println("Inside rest controller Processing request: " + data);
-            DomainResponse response = domainService.process(data);
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            // Log the exception
-            e.printStackTrace();
-            // Return a 500 Internal Server Error response
-            return ResponseEntity.status(500).body(new DomainResponse());
-        }
+    @Autowired
+    private ProducerTemplate producerTemplate;
+
+
+
+    @PostMapping("/requestbody")
+    public String prcessbody(@RequestBody MyReqBody request) {
+        // Send the request body to the Camel route
+        producerTemplate.sendBody("direct:start", request);
+        return "Request processed";
     }
+
+
 }
